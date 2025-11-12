@@ -1,22 +1,33 @@
-import Image from "next/image"
-import Header from "./_components/header"
-import SearchInput from "./_components/ui/search-input"
-import banner from "../public/banner.png"
+import Image from "next/image";
+import Header from "./_components/header";
+import SearchInput from "./_components/search-input";
+import banner from "../public/banner.png";
+import BookingItem from "./_components/booking-item";
 
 const Home = () => {
   return (
-    <div>
-      <Header/>
+    <main>
+      <Header />
       <div className="space-y-4 px-5">
-        <SearchInput/>
-        <Image 
-        src={banner}
-        alt="Agende agora!" 
-        sizes="100vw" 
-        className="w-full h-auto"/>
+        <SearchInput />
+        <Image
+          src={banner}
+          alt="Agende agora!"
+          sizes="100vw"
+          className="h-auto w-full"
+        />
+        <h2 className="text-foreground text-xs font-semibold uppercase">
+          Agendamentos
+        </h2>
+        <BookingItem
+          serviceName="Corte de Cabelo"
+          barberShopName="Barbearia do Sagri"
+          barberShopImageUrl="https://utfs.io/f/c4919193-a675-4c47-9f21-ebd86d1c8e6a-4oen2a.png"
+          date={new Date()}
+          />
       </div>
-    </div>
-  )
-}
+    </main>
+  );
+};
 
-export default Home
+export default Home;
