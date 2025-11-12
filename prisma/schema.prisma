@@ -19,7 +19,7 @@ model Barbershop {
   name        String
   address     String
   description String
-  ImageUrl    String
+  imageUrl    String
   phones      String[]
   services    BarbershopService[]
 }
@@ -28,7 +28,7 @@ model BarbershopService {
   id           String     @id @default(uuid())
   name         String
   description  String
-  ImageUrl     String
+  imageUrl     String
   barbershopId String
   barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
   priceInCents Int
