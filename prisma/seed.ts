@@ -111,7 +111,7 @@ async function seedDatabase() {
         data: {
           name,
           address,
-          ImageUrl: imageUrl,
+          imageUrl: imageUrl,
           phones: ["(11) 99999-9999", "(11) 99999-9999"],
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac augue ullamcorper, pharetra orci mollis, auctor tellus. Phasellus pharetra erat ac libero efficitur tempus. Donec pretium convallis iaculis. Etiam eu felis sollicitudin, cursus mi vitae, iaculis magna. Nam non erat neque. In hac habitasse platea dictumst. Pellentesque molestie accumsan tellus id laoreet.",
@@ -129,7 +129,7 @@ async function seedDatabase() {
                 id: barbershop.id,
               },
             },
-            ImageUrl: service.imageUrl,
+            imageUrl: service.imageUrl,
           },
         });
       }
